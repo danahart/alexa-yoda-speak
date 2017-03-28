@@ -11,8 +11,8 @@ exports.handler = function(event, context, callback) {
 };
 
 var startSessionHandlers = {
-    'StartSession': function() {
-        this.emit(':askWithCard', 'Hello, say a sentence you would like translated to yodish');
+    'LaunchRequest': function() {
+        this.emit(':askWithCard', 'Hello, say a sentence you would like translated to Yodish or ask about engineering');
     },
     'AMAZON.StopIntent': function() {
       this.emit(':tell', "Goodbye!");
