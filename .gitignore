@@ -1,0 +1,7 @@
+node_modules/
+build/
+.vagrant/
+.idea/
+npm-debug.log*
+newrelic_agent.log*
+*.sublime-project

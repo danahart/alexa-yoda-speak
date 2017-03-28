@@ -1,0 +1,8 @@
+YodaIntent translate {i am a green alien|phrase}
+YodaIntent translate {i am wise and use the force|phrase}
+YodaIntent translate {I sense the dark side|phrase}
+YodaIntent translate {You are angry|phrase}
+YodaIntent translate {Size does not matter|phrase}
+YodaEngineeringIntent engineer
+YodaEngineeringIntent become an engineer
+YodaEngineeringIntent why is engineering great
