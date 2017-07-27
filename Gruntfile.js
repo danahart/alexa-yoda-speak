@@ -1,29 +1,32 @@
-//require('dotenv').load();
 var grunt = require('grunt');
+var config = require('config');
 grunt.loadNpmTasks('grunt-aws-lambda');
 
 grunt.initConfig({
-   lambda_invoke: {
-      default: {
-         options: {
-            file_name: 'index.js'
-         }
+    lambda_invoke: {
+    default: {
+    }
+ },
+ lambda_deploy: {
+
+    default: {
+       arn : config.get('Amazon.lambda-arn'),
+       options : {
+          region : 'us-east-1',
+          file_name: 'index.js'
       }
-   },
-   lambda_deploy: {
-      default: {
-         package: 'YodaSkill',
-         arn: ''
+
+    },
+ },
+ lambda_package: {
+    default: {
+      arn : config.get('Amazon.lambda-arn'),
+       options : {
+          region : 'us-east-1',
+          file_name: 'index.js'
       }
-   },
-   lambda_package: {
-      default: {
-         options: {
-            include_files: ['.env']
-         },
-         package: 'YodaSkill'
-      }
-   }
+    }
+ }
 });
 
 grunt.registerTask('deploy', ['lambda_package', 'lambda_deploy'])

@@ -15,6 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "alexa-sdk": "^1.0.7",
+    "config": "^1.26.1",
+    "grunt": "^1.0.1",
+    "grunt-aws-lambda": "^0.13.0",
     "isomorphic-fetch": "^2.2.1"
   }
 }
